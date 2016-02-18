@@ -7,59 +7,64 @@
     .config(function($stateProvider, $urlRouterProvider) {
       $stateProvider
 
-        .state('login', {
-          url: '/',
-          //controller: 'loginPageController',
-          views: {
-            'navbar': {},
-            'content': {
-              templateUrl: 'login/login.html',
-              controller: 'loginController'
-            }
+      .state('login', {
+        url: '/',
+        views: {
+          'navbar': {},
+          'content': {
+            templateUrl: 'login/login.html',
+            controller: 'loginController'
           }
-        })
-
-          .state('profile', {
-            url: '/profile',
-            views: {
-              'navbar@': {
-                templateUrl: 'navbar/navbar.html',
-                controller: 'NavbarController',
-                controllerAs: 'nav'
-              },
-              'content@': {
-                templateUrl: 'profile/profile.html',
-                controller: 'profileController',
-                controllerAs: 'profile'
-              }
-            }
-          });
-
-  /*      $stateProvider
-    .state('app', {
-      url: '',
-      controller: 'AppCtrl',
-      views: {
-        'navbar': {
-          templateUrl: 'js/core/templates/navbar.tpl.html',
-          controller: 'NavbarCtrl'
-        },
-        'main': {
-          templateUrl: 'js/core/templates/main.tpl.html'
         }
-      }
-    })
+      })
 
-    .state('app.home', {
-      url: '/home',
-      templateUrl: 'js/main/templates/home.tpl.html',
-      controller: 'HomeCtrl'
-    })
-    .state('app.about', {
-      url: '/about',
-      templateUrl: 'js/main/templates/about.tpl.html',
-      controller: 'AboutCtrl'
-    })*/
+      .state('profile', {
+        url: '/profile',
+        views: {
+          'navbar@': {
+            templateUrl: 'navbar/navbar.html',
+            controller: 'NavbarController',
+            controllerAs: 'nav'
+          },
+          'content@': {
+            templateUrl: 'profile/profile.html',
+            controller: 'profileController',
+            controllerAs: 'profile'
+          }
+        }
+      });
+
+      .state('history', {
+        url: '/history',
+        views: {
+          'navbar@': {
+            templateUrl: 'navbar/navbar.html',
+            controller: 'NavbarController',
+            controllerAs: 'nav'
+          },
+          'content@': {
+            templateUrl: 'history/history.html',
+            controller: 'historyController',
+            controllerAs: 'history'
+          }
+        }
+      });
+
+      .state('messages', {
+        url: '/messages',
+        views: {
+          'navbar@': {
+            templateUrl: 'navbar/navbar.html',
+            controller: 'NavbarController',
+            controllerAs: 'nav'
+          },
+          'content@': {
+            templateUrl: 'messages/messages.controller.js',
+            controller: 'messageController',
+            controllerAs: 'message'
+          }
+        }
+      });
 
       $urlRouterProvider.otherwise("/");
     });

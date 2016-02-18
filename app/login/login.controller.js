@@ -3,14 +3,14 @@
  */
 ;
 (function() {
-    'use strict';
+  'use strict';
 
-    angular.module('gpApp')
-        .controller('loginController', loginController);
+  angular.module('gpApp')
+    .controller('loginController', loginController);
 
-        function loginController($scope, $state){
-            var vm = this;
-            //$scope.greeting = 'Hi! I am a content view.';
-        }
+  function loginController($scope, $state) {
+    // var vm = this;
+    //$scope.greeting = 'Hi! I am a content view.';
+  }
 
 })();
