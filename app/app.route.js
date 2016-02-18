@@ -32,7 +32,7 @@
             controllerAs: 'profile'
           }
         }
-      });
+      })
 
       .state('history', {
         url: '/history',
@@ -48,7 +48,7 @@
             controllerAs: 'history'
           }
         }
-      });
+      })
 
       .state('messages', {
         url: '/messages',
@@ -59,9 +59,9 @@
             controllerAs: 'nav'
           },
           'content@': {
-            templateUrl: 'messages/messages.controller.js',
-            controller: 'messageController',
-            controllerAs: 'message'
+            templateUrl: 'messages/messages.html',
+            controller: 'messagesController',
+            controllerAs: 'messages'
           }
         }
       });

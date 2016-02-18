@@ -3,10 +3,10 @@
   'use strict';
 
   angular.module('gpApp')
-    .controller('messageController', messageController);
+    .controller('messagesController', messagesController);
 
-  function messageController($scope, $state) {
-    
+  function messagesController($scope, $state) {
+
   }
 
 })();
