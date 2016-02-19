@@ -1,12 +1,22 @@
 <div class="wrapper">
-  History
-  <div>
-    <div ng-repeat="item in history.historyItems">
-      Title: <div> {{item.title}}</div>
-      Description: <div> {{item.description}}</div>
-      Price: <div>{{item.price}}</div>
-    </div>
-    <p>{{history.historyItems}}</p>
+  History of bying hotels
 
+  <div ng-repeat="item in history.historyItems">
+    <div class="card-panel grey lighten-5 z-depth-1">
+      <div class="row valign-wrapper">
+        <div class="col xs6">
+          <img ng-src="{{item.image}}" alt="" class=" responsive-img">
+        </div>
+        <div class="col xs6">
+          <div class="badge col xs12">{{item.price | currency}}</div>
+          <div class="col xs12 black-text">{{item.title}}</div>
+        </div>
+      </div>
+        <div class="col xs12">
+          <p>Description: {{item.description}}</p>
+        </div>
+
+    </div>
   </div>
+
 </div>
