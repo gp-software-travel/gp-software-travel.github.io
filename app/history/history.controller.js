@@ -6,6 +6,7 @@
     .controller('historyController', historyController);
 
   function historyController($scope, $state) {
+
     
   }
 
