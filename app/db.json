@@ -4,35 +4,35 @@
       "id": 0,
       "image": "http://lorempixel.com/80/80/city/",
       "title": "The best hotel",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel arcu ex. Pellentesque habitant morbi tristique senectus et netus et."
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel arcu ex. Pellentesque habitant morbi tristique senectus et netus et.",
       "price": 50000
     },
     {
       "id": 1,
       "image": "http://lorempixel.com/80/80/city/",
       "title": "The highest hotel",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel arcu ex. Pellentesque habitant morbi tristique senectus et netus et."
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel arcu ex. Pellentesque habitant morbi tristique senectus et netus et.",
       "price": 30000
     },
     {
       "id": 2,
       "image": "http://lorempixel.com/80/80/city/",
       "title": "Small hotel",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel arcu ex. Pellentesque habitant morbi tristique senectus et netus et."
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel arcu ex. Pellentesque habitant morbi tristique senectus et netus et.",
       "price": 80000
     },
     {
       "id": 3,
       "image": "http://lorempixel.com/80/80/city/",
       "title": "Hostel",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel arcu ex. Pellentesque habitant morbi tristique senectus et netus et."
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel arcu ex. Pellentesque habitant morbi tristique senectus et netus et.",
       "price": 10000
     },
     {
       "id": 4,
       "image": "http://lorempixel.com/80/80/city/",
       "title": "California hotel",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel arcu ex. Pellentesque habitant morbi tristique senectus et netus et."
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel arcu ex. Pellentesque habitant morbi tristique senectus et netus et.",
       "price": 100000
     }
   ],
