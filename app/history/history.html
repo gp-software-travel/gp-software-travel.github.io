@@ -4,18 +4,17 @@
   <div ng-repeat="item in history.historyItems">
     <div class="card-panel grey lighten-5 z-depth-1">
       <div class="row valign-wrapper">
-        <div class="col xs6">
-          <img ng-src="{{item.image}}" alt="" class=" responsive-img">
+        <div>
+          <img ng-src="{{item.image}}" alt="" class="responsive-img">
         </div>
-        <div class="col xs6">
-          <div class="badge col xs12">{{item.price | currency}}</div>
+        <div>
+          <div class="col xs12">{{item.price | currency}}</div>
           <div class="col xs12 black-text">{{item.title}}</div>
         </div>
       </div>
-        <div class="col xs12">
+        <div >
           <p>Description: {{item.description}}</p>
         </div>
-
     </div>
   </div>
 
