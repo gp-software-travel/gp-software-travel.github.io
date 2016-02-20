@@ -1,3 +1,25 @@
 <div class="wrapper">
-  History
+  History of bying hotels
+
+  <div>
+    <button ng-click="history.sortByPrice()">Price</button>
+  </div>
+
+  <div ng-repeat="item in history.historyItems | filter:sortByPrice">
+    <div class="card-panel grey lighten-5 z-depth-1">
+      <div class="row valign-wrapper">
+        <div>
+          <img ng-src="{{item.image}}" alt="" class="responsive-img">
+        </div>
+        <div>
+          <div class="col xs12">{{item.price | currency}}</div>
+          <div class="col xs12 black-text">{{item.title}}</div>
+        </div>
+      </div>
+        <div >
+          <p>Description: {{item.description}}</p>
+        </div>
+    </div>
+  </div>
+
 </div>
