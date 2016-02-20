@@ -2,7 +2,8 @@
   History of bying hotels
 
   <div>
-    <button ng-click="history.sortByPrice()">Price</button>
+    <button class="btn blue darken-2" ng-click="history.sortByPrice()">Price
+      <i class="material-icons right">{{history.orderIcon}}</i></button>
   </div>
 
   <div ng-repeat="item in history.historyItems | filter:sortByPrice">
