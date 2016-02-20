@@ -11,7 +11,6 @@
   function NavbarController($scope, $state, profileService) {
     var vm = this;
 
-    //$(".button-collapse").sideNav();
     $('.button-collapse').sideNav({
       closeOnClick: true
     });
@@ -19,7 +18,7 @@
     profileService.getUser().then(successCallbackGet, errorCallback);
 
     function successCallbackGet(response) {
-      vm.user = response.data;
+      vm.user = response;
       console.log('successCallbackGet:', vm.user);
     }
 

@@ -6,8 +6,8 @@
     .controller('profileController', profileController);
 
   function profileController($scope, $state, profileService, $timeout) {
-    console.log('CONTROSLLER', arguments);
-    $state.go('profile', {});
+    //console.log('CONTROLLER', arguments);
+    //$state.go('profile', {});
     
     var vm = this;
 
@@ -31,7 +31,7 @@
     }
 
     function successCallbackGet(response) {
-      vm.user = response.data;
+      vm.user = response;
       console.log('successCallbackGet:', vm.user);
     }
 
@@ -44,10 +44,9 @@
       return "Error: " + response.status + " " + response.statusText;
     }
 
-      console.log('Collapsible', $('.collapsible'));
-          $('.collapsible').collapsible({
-              accordion: false // A setting that changes the collapsible behavior to expandable instead of the default accordion style
-          });
+    $('.collapsible').collapsible({
+      accordion: false // A setting that changes the collapsible behavior to expandable instead of the default accordion style
+    });
 
   }
 })();
