@@ -10,7 +10,7 @@
     
     var toggleSorting = 1;
     var vm = this;
-    vm.orderIcon = '';
+    vm.orderIcon = 'sentiment_satisfied';
 
     vm.sortByPrice = sortByPrice;
 
