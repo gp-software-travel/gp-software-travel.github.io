@@ -6,6 +6,7 @@
     .controller('historyController', historyController);
 
   function historyController($scope, $state, historyService) {
+<<<<<<< HEAD
     
     var toggleSorting = 1;
     var vm = this;
@@ -27,6 +28,15 @@
       return vm.historyItems;
     }
 
+=======
+    var vm = this;
+
+     historyService.getHistory().then(function(response){
+      vm.historyItems = response.data;
+       console.log('historyItems', vm.historyItems);
+    });
+
+>>>>>>> 943fabadd19669606c70f76140dd9c20ec38817f
   }
 
 })();
