@@ -15,15 +15,11 @@
       closeOnClick: true
     });
 
-    profileService.getUser().then(successCallbackGet, errorCallback);
+    profileService.getUser(successCallbackGet);
 
     function successCallbackGet(response) {
       vm.user = response;
-      console.log('successCallbackGet:', vm.user);
-    }
-
-    function errorCallback(response) {
-      return "Error: " + response.status + " " + response.statusText;
+      console.log('NavBar: successCallbackGet:', vm.user);
     }
 
   }

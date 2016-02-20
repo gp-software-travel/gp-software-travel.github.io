@@ -15,7 +15,7 @@
     vm.sortByPrice = sortByPrice;
 
     historyService.getHistory().then(function(response) {
-      vm.historyItems = response.data;
+      vm.historyItems = response;
       console.log('historyItems', vm.historyItems);
     });
 

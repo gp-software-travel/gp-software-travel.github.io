@@ -20,7 +20,7 @@
       };
 
       function successCallbackGet(response) {
-        historyData = response;
+        historyData = response.data;
         return historyData;
       }
 

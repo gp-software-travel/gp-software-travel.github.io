@@ -14,7 +14,7 @@
     vm.updateUser = updateUser;
     vm.processingAnimate = false;
 
-    profileService.getUser().then(successCallbackGet, errorCallback);
+    profileService.getUser(successCallbackGet);
 
     function updateUser() {
       vm.processingAnimate = true;
@@ -25,18 +25,18 @@
         vm.processingAnimate = !vm.processingAnimate;
       }, 2000);
 
-      profileService.setUser(vm.user).then(successCallbackPut, errorCallback);
+      profileService.setUser(vm.user).then(successCallbackPost, errorCallback);
 
       $('.collapsible-body').hide();
     }
 
     function successCallbackGet(response) {
       vm.user = response;
-      console.log('successCallbackGet:', vm.user);
+      console.log('Profile: successCallbackGet:', vm.user);
     }
 
-    function successCallbackPut(response) {
-      console.log('successCallbackPut:', response.data);
+    function successCallbackPost(response) {
+      console.log('Profile: successCallbackPost:', response.data);
       return response.data;
     }
 
