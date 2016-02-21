@@ -21,6 +21,7 @@
 
     function sortByPrice() {
       toggleSorting *= -1;
+      
       if(toggleSorting == 1){
         vm.orderIcon = 'expand_less';
       } else {
