@@ -6,15 +6,15 @@
     .controller('profileController', profileController);
 
   function profileController($scope, $state, profileService, $timeout) {
-    console.log('CONTROSLLER', arguments);
-    $state.go('profile', {});
+    //console.log('CONTROLLER', arguments);
+    //$state.go('profile', {});
     
     var vm = this;
 
     vm.updateUser = updateUser;
     vm.processingAnimate = false;
 
-    profileService.getUser().then(successCallbackGet, errorCallback);
+    profileService.getUser(successCallbackGet);
 
     function updateUser() {
       vm.processingAnimate = true;
@@ -25,18 +25,18 @@
         vm.processingAnimate = !vm.processingAnimate;
       }, 2000);
 
-      profileService.setUser(vm.user).then(successCallbackPut, errorCallback);
+      profileService.setUser(vm.user).then(successCallbackPost, errorCallback);
 
       $('.collapsible-body').hide();
     }
 
     function successCallbackGet(response) {
-      vm.user = response.data;
-      console.log('successCallbackGet:', vm.user);
+      vm.user = response;
+      console.log('Profile: successCallbackGet:', vm.user);
     }
 
-    function successCallbackPut(response) {
-      console.log('successCallbackPut:', response.data);
+    function successCallbackPost(response) {
+      console.log('Profile: successCallbackPost:', response.data);
       return response.data;
     }
 
@@ -44,10 +44,9 @@
       return "Error: " + response.status + " " + response.statusText;
     }
 
-      console.log('Collapsible', $('.collapsible'));
-          $('.collapsible').collapsible({
-              accordion: false // A setting that changes the collapsible behavior to expandable instead of the default accordion style
-          });
+    $('.collapsible').collapsible({
+      accordion: false // A setting that changes the collapsible behavior to expandable instead of the default accordion style
+    });
 
   }
 })();
