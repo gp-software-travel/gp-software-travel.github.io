@@ -1,0 +1,15 @@
+#div{
+    width:300px;
+    padding:30px;
+    background:#ccc;
+    margin:5px;
+}
+#div.ng-enter {
+  opacity:0;
+    -webkit-transition-duration: 1000ms;
+}
+
+#div.ng-enter-active {
+   -webkit-transform:scale(1);
+    opacity:1;
+}
