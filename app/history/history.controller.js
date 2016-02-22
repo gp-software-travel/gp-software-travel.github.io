@@ -8,38 +8,31 @@
 
   function historyController($scope, $state, historyService) {
     
-    // var toggleSorting = 1;
-    // var vm = this;
-    // vm.orderIcon = 'sentiment_satisfied';
+    var toggleSorting = 1;
+    var vm = this;
+    vm.orderIcon = 'sentiment_satisfied';
 
-    // vm.sortByPrice = sortByPrice;
+    vm.sortByPrice = sortByPrice;
 
-    // historyService.getHistory().then(function(response) {
-    //   vm.historyItems = response;
-    //   console.log('historyItems', vm.historyItems);
-    // });
+    historyService.getHistory().then(function(response) {
+      vm.historyItems = response;
+      console.log('historyItems', vm.historyItems);
+    });
 
-    // function sortByPrice() {
-    //   toggleSorting *= -1;
+    function sortByPrice() {
+      toggleSorting *= -1;
 
-    //   if(toggleSorting == 1){
-    //     vm.orderIcon = 'expand_less';
-    //   } else {
-    //     vm.orderIcon = 'expand_more';
-    //   }
+      if(toggleSorting == 1){
+        vm.orderIcon = 'expand_less';
+      } else {
+        vm.orderIcon = 'expand_more';
+      }
 
-    //   vm.historyItems = _.sortBy(vm.historyItems, function(obj) {
-    //     return obj.price * toggleSorting;
-    //   });
+      vm.historyItems = _.sortBy(vm.historyItems, function(obj) {
+        return obj.price * toggleSorting;
+      });
       
-    //   return vm.historyItems;
-    // }
-
-    $scope.items = [];
-    var i = 0;
-    $scope.addItems = function() {
-      $scope.items.push("test"+i);
-      i++;   
+      return vm.historyItems;
     }
 
   }

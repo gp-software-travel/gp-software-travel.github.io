@@ -1,12 +1,12 @@
 <div class="wrapper">
-  <!-- History of bying hotels
+  History of bying hotels
 
   <div>
     <button class="btn blue darken-2" ng-click="history.sortByPrice()">Price
       <i class="material-icons right">{{history.orderIcon}}</i></button>
   </div>
 
-  <div ng-repeat="item in history.historyItems | filter:sortByPrice">
+  <div ng-repeat="item in history.historyItems | filter:sortByPrice" class="history-listing">
     <div class="card-panel grey lighten-5 z-depth-1">
       <div class="row valign-wrapper">
         <div>
@@ -21,11 +21,6 @@
           <p>Description: {{item.description}}</p>
         </div>
     </div>
-  </div> -->
-
-  <button ng-click="addItems()">Add Items</button>
-  <div id="div" ng-repeat="item in items" style="-webkit-transition-delay:500ms">
-    {{item}}
   </div>
 
 </div>

@@ -3,6 +3,6 @@
   'use strict';
 
   angular
-    .module('gpApp', ['ngAnimate']);
+    .module('gpApp', ['ui.router', 'ngAnimate']);
 
 })();

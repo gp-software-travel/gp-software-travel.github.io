@@ -3,7 +3,7 @@
   'use strict';
 
   angular
-    .module('gpApp', ['ui.router'])
+    .module('gpApp')
     .config(function($stateProvider, $urlRouterProvider) {
       $stateProvider
 
