@@ -117,3 +117,22 @@ nav .side-nav li:first-child:hover{
 	top: 60px;
 	left: 122px;
 }
+.messages.collapsible.popout{
+	text-align: left;
+}
+.messages .collapsible-header {
+    line-height: 2rem;
+    padding: 0 0.5rem;
+    padding-top: 0.5rem;
+}
+.messages .collapsible-header i {
+    line-height: 1rem;
+    margin-top: 0.7rem;
+}
+.messages .collapsible-body p {
+    line-height: 1.5rem;
+    font-size: 0.8em;
+}
+.messages .collapsible-header:hover {
+    background-color: rgba(30,136,229,.8);
+}
