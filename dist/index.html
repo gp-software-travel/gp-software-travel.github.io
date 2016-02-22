@@ -9,9 +9,12 @@
 
 </head>
 <body ng-app="gpApp" ng-cloak>
-
+  
   <div ui-view="navbar"></div>
-  <div ui-view="content"></div>
+  <div class="ui-view-container">
+    <div ui-view="content"></div>
+  </div>
+  
 
  <script src="main.js"></script>
 </body>
