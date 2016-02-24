@@ -5,7 +5,7 @@
   angular
     .module('gpApp')
     .service('historyService', ['$http', '$q', function($http, $q) {
-      var baseURL = 'http://localhost:3000/history';
+      var baseURL = 'history/history.json';
 
       var historyData;
 
@@ -20,7 +20,7 @@
       };
 
       function successCallbackGet(response) {
-        historyData = response.data;
+        historyData = response.data.history;
         return historyData;
       }
 

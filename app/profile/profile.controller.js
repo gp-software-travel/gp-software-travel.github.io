@@ -14,7 +14,7 @@
     vm.updateUser = updateUser;
     vm.processingAnimate = false;
 
-    profileService.getUser(successCallbackGet);
+    profileService.getUser().then(successCallbackGet, errorCallback);
 
     function updateUser() {
       vm.processingAnimate = true;

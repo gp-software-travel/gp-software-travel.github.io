@@ -30,7 +30,7 @@ gulp.task('clean', function() {
 
 // Default task
 gulp.task('default', ['clean'], function() {
-  return gulp.start('usemin', 'imagemin', 'image-put', 'copyfonts');
+  return gulp.start('usemin', 'imagemin', 'image-put', 'copyfonts', 'copy-history-json', 'copy-messages-json');
 });
 
 gulp.task('usemin', ['jshint'], function() {
@@ -104,4 +104,14 @@ gulp.task('image-put', function() {
       upscale: true
     }))
     .pipe(gulp.dest('dist/'));
+});
+
+gulp.task('copy-history-json', function() {
+  return gulp.src('app/history/**/*.json')
+    .pipe(gulp.dest('dist/history/'));
+});
+
+gulp.task('copy-messages-json', function() {
+  return gulp.src('app/messages/**/*.json')
+    .pipe(gulp.dest('dist/messages/'));
 });
