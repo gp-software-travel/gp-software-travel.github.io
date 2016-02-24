@@ -18,7 +18,7 @@
     profileService.getUser().then(successCallbackGet, errorCallback);
 
     function successCallbackGet(response) {
-      vm.user = response.data;
+      vm.user = response;
       console.log('NavBar: successCallbackGet:', vm.user);
     }
 

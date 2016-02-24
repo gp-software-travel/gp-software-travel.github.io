@@ -31,7 +31,7 @@
     }
 
     function successCallbackGet(response) {
-      vm.user = response.data;
+      vm.user = response;
       console.log('Profile: successCallbackGet:', vm.user);
     }
 
