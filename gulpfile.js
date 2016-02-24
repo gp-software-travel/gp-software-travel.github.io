@@ -13,8 +13,7 @@ var gulp = require('gulp'),
   rev = require('gulp-rev'),
   browserSync = require('browser-sync'),
   ngannotate = require('gulp-ng-annotate'),
-  del = require('del'),
-  imageResize = require('gulp-image-resize');
+  del = require('del');
 
 
 gulp.task('jshint', function() {
@@ -30,7 +29,7 @@ gulp.task('clean', function() {
 
 // Default task
 gulp.task('default', ['clean'], function() {
-  return gulp.start('usemin', 'imagemin', 'image-put', 'copyfonts', 'copy-history-json', 'copy-messages-json');
+  return gulp.start('usemin', 'imagemin', 'copyfonts', 'copy-history-json', 'copy-messages-json');
 });
 
 gulp.task('usemin', ['jshint'], function() {
@@ -93,17 +92,6 @@ gulp.task('browser-sync', ['default'], function() {
   });
   // Watch any files in dist/, reload on change
   gulp.watch(['dist/**']).on('change', browserSync.reload);
-});
-
-gulp.task('image-put', function() {
-  return gulp.src('app/**/*.png')
-    .pipe(imageResize({
-      width: 48,
-      height: 64,
-      crop: true,
-      upscale: true
-    }))
-    .pipe(gulp.dest('dist/'));
 });
 
 gulp.task('copy-history-json', function() {
