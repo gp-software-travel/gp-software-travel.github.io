@@ -1,7 +1,7 @@
 ;
 (function() {
   'use strict';
-  
+
   angular
     .module('gpApp')
     .service('historyService', ['$http', '$q', function($http, $q) {
