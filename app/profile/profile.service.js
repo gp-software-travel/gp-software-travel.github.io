@@ -2,33 +2,39 @@
 (function() {
   angular
     .module('gpApp')
-    .service('profileService', ['$http', function($http) {
+    .service('profileService', ['$http', '$q', function($http, $q) {
       var baseURL = 'http://fathomless-everglades-3680.herokuapp.com/api/user/2';
 
         var userData;
         var allCallback = [];
+        var promise;
 
-      this.getUser = function(callback) {
+      this.getUser = function() {
+        if(!promise) {
+          console.log('new p');
+          promise = $http.get(baseURL);
+        } else {
 
-        if (userData) {
-          console.log('Get cached user data');
-          callback(userData);
+          console.log('cached p', promise);
         }
-        else {
-          allCallback.push(callback);
-          if(allCallback.length == 1){
-            console.log('Send new request for user data');
-            $http.get(baseURL).then(successCallbackGet, errorCallback);
-          }
-        }
+        return promise;
+
+
+            //return $http.get(baseURL).then(successCallbackGet, errorCallback);
+
       };
+
+        function requestUserData(){
+
+        }
 
       function successCallbackGet(response) {
         userData = response.data;
-        allCallback.map(function(callback){
+        return userData;
+       /* allCallback.map(function(callback){
           callback(userData);
         });
-        allCallback = [];
+        allCallback = [];*/
       }
 
       function errorCallback(response) {

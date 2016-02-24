@@ -14,7 +14,7 @@
     vm.updateUser = updateUser;
     vm.processingAnimate = false;
 
-    profileService.getUser(successCallbackGet);
+    profileService.getUser().then(successCallbackGet, errorCallback);
 
     function updateUser() {
       vm.processingAnimate = true;
@@ -31,7 +31,7 @@
     }
 
     function successCallbackGet(response) {
-      vm.user = response;
+      vm.user = response.data;
       console.log('Profile: successCallbackGet:', vm.user);
     }
 
