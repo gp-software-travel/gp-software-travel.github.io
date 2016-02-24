@@ -27,4 +27,5 @@ Development guide
   
 5. run application:  
 json-server db.json (it must obtain port 3000 or will fail)
+
 gulp watch (will start browser with app)
