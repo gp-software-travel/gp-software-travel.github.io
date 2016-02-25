@@ -13,7 +13,8 @@
           'navbar': {},
           'content': {
             templateUrl: 'login/login.html',
-            controller: 'loginController'
+            controller: 'loginController',
+            controllerAs: 'login'
           }
         }
       })

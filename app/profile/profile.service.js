@@ -10,7 +10,12 @@
       this.getUser = function() {
         if(!promise) {
           console.log('new p');
-          promise = $http.get(baseURL).then(successCallbackGet, errorCallback);
+          promise = $http({
+            url: baseURL,
+            skipAuthorization: true,
+            method: 'GET'
+          })
+              .then(successCallbackGet, errorCallback);
         } else {
           console.log('cached p', promise);
         }

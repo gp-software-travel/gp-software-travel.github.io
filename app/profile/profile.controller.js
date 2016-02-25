@@ -5,9 +5,8 @@
   angular.module('gpApp')
     .controller('profileController', profileController);
 
-  function profileController($scope, $state, profileService, $timeout) {
-    //console.log('CONTROLLER', arguments);
-    //$state.go('profile', {});
+  function profileController($scope, $state, profileService, $timeout, loginService) {
+    loginService.checkExpired();
     
     var vm = this;
 

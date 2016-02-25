@@ -8,7 +8,8 @@
   angular.module('gpApp')
     .controller('NavbarController', NavbarController);
 
-  function NavbarController($scope, $state, profileService) {
+  function NavbarController($scope, $state, profileService, loginService) {
+   loginService.checkExpired();
     var vm = this;
 
     $('.button-collapse').sideNav({

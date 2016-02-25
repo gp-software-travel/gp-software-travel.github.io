@@ -1,4 +1,17 @@
 {
+  "login": [
+    {
+      "user": "admin",
+      "password": "123"
+    },
+    {
+      "success": true,
+      "token": 123456
+    },
+    {
+      "success": false
+    }
+  ],
   "history": [
     {
       "id": 0,
