@@ -9,7 +9,7 @@
     .controller('NavbarController', NavbarController);
 
   function NavbarController($scope, $state, profileService, loginService) {
-   loginService.checkExpired();
+    loginService.checkExpired();
     var vm = this;
 
     $('.button-collapse').sideNav({

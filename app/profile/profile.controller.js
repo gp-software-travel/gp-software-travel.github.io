@@ -7,7 +7,7 @@
 
   function profileController($scope, $state, profileService, $timeout, loginService) {
     loginService.checkExpired();
-    
+
     var vm = this;
 
     vm.updateUser = updateUser;
