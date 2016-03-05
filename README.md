@@ -1,7 +1,10 @@
 # gp-software-travel.github.io
 Social Network
 
-Development guide
+### Link to gh-pages
+http://gp-software-travel.github.io/dist/#/
+
+##Development guide
 
 1. npm install 
 
